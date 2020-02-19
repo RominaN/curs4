@@ -4,31 +4,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace curs4_2
+namespace curs4
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Imobil imo = new Imobil();
-            imo.afiseazaDetaliiImobil();
-            imo.tipCasa = "Casa";
-            imo.nrEtaje = 1;
-            imo.pret=25.23;
-
-            Console.WriteLine ("tipCasa: " + imo.tipCasa + "\nNumarEtaje: " + imo.nrEtaje + "\nPret: " + imo.pret);
-
-            Imobil imo2 = new Imobil("apartament");
-            imo2.nrEtaje = 5;
-            imo2.pret = 72.57;
+            Animal pers = new Animal();
+            pers.afiseazaDetaliiAnimal();
+            pers.tipAnimal = "vacuta";
+            pers.culoare = "maro";
+            pers.varsta = 10;
             Console.WriteLine();
-            Console.WriteLine("tipCasa: " + imo2.tipCasa + "\nNumarEtaj: " + imo2.nrEtaje + "\nPret: " + imo2.pret);
+            Console.WriteLine("TipAnimal: " + pers.tipAnimal + "\nCuloare: " + pers.culoare + "\nVarsta: " + pers.varsta);
+           
 
-            Imobil imo3 = new Imobil("bloc", 7, 50500);
+            Animal pers2 = new Animal("caine");
+            pers2.culoare = "negru";
+            pers2.varsta = 4;
             Console.WriteLine();
-            Console.WriteLine("tipCasa: " + imo3.tipCasa + "\nNumarEtaj: " + imo3.nrEtaje + "\nPret: " + imo3.pret);
+            Console.WriteLine("TipAnimal: " + pers2.tipAnimal + "\nCuloare: " + pers2.culoare + "\nVarsta: " + pers2.varsta);
+            
 
-            Console.ReadLine();
+            Animal pers3 = new Animal("cal", "alb", 6);
+            Console.WriteLine();
+            Console.WriteLine("TipAnimal: " + pers3.tipAnimal + "\nCuloare: " + pers3.culoare + "\nVarsta: " + pers3.varsta);
+            Console.ReadKey();
+
+
         }
+
     }
 }
+
